@@ -1,18 +1,20 @@
-// Interações do site institucional
+/* ================================
+   SITE.JS - JK SOLUÇÕES
+   Funções específicas do site
+   ================================ */
 
-// Rolagem suave para seções
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href"))
-      .scrollIntoView({ behavior: "smooth" });
-  });
-});
+/* Envio de formulário de contato via WhatsApp */
+function sendWhatsApp(event) {
+  event.preventDefault();
 
-// Exemplo de botão hero
-const heroBtn = document.getElementById("btn-servicos");
-if (heroBtn) {
-  heroBtn.addEventListener("click", () => {
-    window.location.href = "servicos.html";
-  });
+  const nome = document.getElementById("nome").value;
+  const telefone = document.getElementById("telefone").value;
+  const email = document.getElementById("email").value;
+  const mensagem = document.getElementById("mensagem").value;
+
+  const texto = `Olá, meu nome é ${nome}. Telefone: ${telefone} E-mail: ${email} Mensagem: ${mensagem}`;
+  const numero = "5545988213899"; // número de destino (WhatsApp da empresa)
+  const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+  window.open(url, "_blank");
 }

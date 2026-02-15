@@ -1,40 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>index.html JK Soluções - Início</title>
-  <!-- CSS global e específico do site -->
+  <title>JK Soluções - Engenharia que gera resultados</title>
+  <!-- Estilos globais -->
   <link rel="stylesheet" href="../assets/global.css">
+  <!-- Estilos específicos do site -->
   <link rel="stylesheet" href="assets/css/site.css">
 </head>
+
 <body>
-  <!-- Header importado -->
+  <!-- Header carregado dinamicamente -->
   <div id="header"></div>
 
-  <!-- Hero da Home -->
   <main>
-    <h1>JK SOLUÇÕES</h1>
-    <p>Engenharia que gera resultados</p>
-    <button id="btn-servicos">Conheça nossos serviços</button>
+    <!-- Banner inicial -->
+    <section id="home" class="banner">
+      <div class="banner-content">
+        <h2>Engenharia que gera resultados</h2> <button onclick="location.href='#servicos'">Conheça nossos
+          serviços</button>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre">
+      <h2>Sobre a Empresa</h2>
+      <p>[História da JK Soluções]</p>
+      <p>[Texto institucional]</p>
+      <div class="institucional">
+        <img src="../assets/img/institucional.png" alt="Imagem Institucional JK Soluções">
+      </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos">
+      <h2>Serviços</h2>
+      <div class="cards">
+        <div class="card">Consultoria Técnica</div>
+        <div class="card">Instalações Elétricas</div>
+        <div class="card">GMGs</div>
+        <div class="card">Venda de Peças</div>
+        <div class="card">Serviços Tech</div>
+      </div>
+    </section>
+
+    <!-- Diretrizes -->
+    <section id="diretrizes">
+      <h2>Propósito, Futuro e Princípios</h2>
+      <div class="cards">
+        <div class="card">Propósito<br>[Texto Placeholder]</div>
+        <div class="card">Futuro<br>[Texto Placeholder]</div>
+        <div class="card">Princípios<br>[Lista Placeholder]</div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+      <h2>Contato</h2>
+      <form class="form" id="formContato" onsubmit="sendWhatsApp(event)">
+        <input type="text" id="nome" placeholder="Nome" required>
+        <input type="tel" id="telefone" placeholder="Telefone" required>
+        <input type="email" id="email" placeholder="E-mail" required>
+        <textarea id="mensagem" placeholder="Mensagem" required></textarea>
+        <button type="submit">Enviar via WhatsApp</button>
+      </form>
+    </section>
   </main>
 
-  <!-- Footer importado -->
+  <!-- Footer carregado dinamicamente -->
   <div id="footer"></div>
 
-  <!-- JS global do site -->
+  <!-- Scripts globais -->
+  <script src="../assets/global.js"></script>
+  <!-- Scripts específicos do site -->
   <script src="assets/js/site.js"></script>
+
+  <!-- Inclusão dos partials -->
   <script>
-    // Importa os partials de header e footer
+    // Carregar header
     fetch("partials/header-site.html")
       .then(res => res.text())
-      .then(data => document.getElementById("header").innerHTML = data)
-      .catch(err => console.error("Erro ao carregar header:", err));
+      .then(data => document.getElementById("header").innerHTML = data);
 
+    // Carregar footer
     fetch("partials/footer-site.html")
       .then(res => res.text())
-      .then(data => document.getElementById("footer").innerHTML = data)
-      .catch(err => console.error("Erro ao carregar footer:", err));
+      .then(data => document.getElementById("footer").innerHTML = data);
   </script>
 </body>
+
 </html>

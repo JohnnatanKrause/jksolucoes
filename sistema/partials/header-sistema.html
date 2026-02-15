@@ -1,15 +1,28 @@
+<!-- ================================
+     HEADER-SISTEMA.HTML - JK SOLUÇÕES
+     ================================ -->
+
 <header>
-  <nav>
-    <a href="dashboard.html">
-      <img src="assets/img/logo.png" alt="Logo JK Soluções" class="logo">
-    </a>
-    <ul>
-      <li><a href="dashboard.html">Dashboard</a></li>
-      <li><a href="forms.html">Formulários</a></li>
-      <li><a href="relatorios.html">Relatórios</a></li>
-      <li><a href="propostas.html">Propostas</a></li>
-      <li><a href="laudos.html">Laudos</a></li>
-      <li><a href="login.html">Sair</a></li>
-    </ul>
-  </nav>
+  <div class="container">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="../assets/img/logo.png" alt="JK Soluções">
+      <span class="slogan">Tecnologia e Inovação</span>
+    </div>
+
+    <!-- Menu de navegação interno -->
+    <nav class="nav">
+      <ul>
+        <li><a href="../sistema/dashboard.html">Dashboard</a></li>
+        <li><a href="../sistema/forms.html">Formulários</a></li>
+        <li><a href="../sistema/laudos.html">Laudos</a></li>
+        <li><a href="../sistema/propostas.html">Propostas</a></li>
+        <li><a href="../sistema/relatorios.html">Relatórios</a></li>
+        <li><a href="../sistema/login.html">Sair</a></li>
+      </ul>
+    </nav>
+
+    <!-- Botão menu mobile -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  </div>
 </header>

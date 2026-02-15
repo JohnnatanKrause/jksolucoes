@@ -1,4 +1,7 @@
-/* Global.css */
+/* ================================
+   GLOBAL.CSS - JK SOLUÇÕES
+   Reset + Tipografia + Variáveis
+   ================================ */
 
 /* Reset básico */
 * {
@@ -8,31 +11,219 @@
 }
 
 /* Tipografia padrão */
+html,
 body {
   font-family: 'Open Sans', Arial, sans-serif;
-  color: #444444;
-  background-color: #ffffff;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
 }
 
-/* Paleta de cores */
+/* Paleta de cores - variáveis globais */
 :root {
-  --azul-escuro: #003366;
-  --verde: #2E8B57;
-  --cinza-grafite: #444444;
-  --branco: #ffffff;
+  --cor-primaria: #003366;   /* Azul escuro institucional */
+  --cor-secundaria: #2E8B57; /* Verde sustentabilidade */
+  --cor-texto: #444444;      /* Cinza grafite para textos */
+  --cor-branco: #FFFFFF;     /* Branco */
+  --cor-destaque: #FF9800;   /* Laranja opcional para alertas/destaques */
+  --cor-fundo: #F5F5F5;      /* Cinza claro de fundo */
 }
 
-/* Links e botões */
+/* Links */
 a {
-  color: var(--azul-escuro);
   text-decoration: none;
+  color: var(--cor-primaria);
 }
 
+a:hover {
+  color: var(--cor-secundaria);
+}
+
+/* Botões genéricos */
 button {
-  background: var(--verde);
-  color: var(--branco);
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
   border: none;
   padding: 10px 20px;
   cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--cor-secundaria);
+}
+
+/* Containers padrão */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Cabeçalhos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--cor-primaria);
+  margin-bottom: 15px;
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+  text-align: center;
+  padding: 15px 0;
+}
+
+/* Logo padrão */
+.logo img {
+  max-width: 180px;
+  height: auto;
+}
+
+/* Header alinhado */
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo à esquerda, menu à direita */
+}
+
+/* ================================
+   MENU DE NAVEGAÇÃO
+   ================================ */
+
+/* Menu padrão (desktop) */
+.nav {
+  display: block;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;      /* horizontal */
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+  color: var(--cor-secundaria);
+}
+
+/* Botão ☰ escondido no desktop */
+.menu-toggle {
+  display: none;
+}
+
+/* ================================
+   RESPONSIVIDADE (mobile)
+   ================================ */
+@media (max-width: 768px) {
+  /* Esconde menu por padrão */
+  .nav {
+    display: none;
+    flex-direction: column;
+    background-color: var(--cor-primaria);
+    position: absolute;
+    top: 60px; /* abaixo do header */
+    right: 0;
+    width: 200px;
+    padding: 20px;
+  }
+
+  /* Mostra menu quando ativo */
+  .nav.active {
+    display: flex;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav ul li a {
+    color: var(--cor-branco);
+  }
+
+  /* Botão ☰ visível no mobile */
+  .menu-toggle {
+    display: block;
+    background: var(--cor-primaria);
+    color: var(--cor-branco);
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px 10px;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header fixo no topo */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--cor-branco);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000; /* garante que fique acima do conteúdo */
+}
+
+/* Compensar o espaço do header fixo */
+body {
+  padding-top: 80px; /* altura aproximada do header */
+}
+/* Banner inicial */
+.banner {
+  background-image: url("img/inicial.png"); /* sua imagem */
+  background-size: cover;       /* ocupa toda a área */
+  background-position: center;  /* centraliza a imagem */
+  height: 100vh;                /* ocupa altura total da tela */
+  display: flex;
+  align-items: center;          /* centraliza verticalmente */
+  justify-content: center;      /* centraliza horizontalmente */
+  text-align: center;
+  color: var(--cor-branco);     /* texto branco sobre a imagem */
+  position: relative;
+}
+
+/* Conteúdo dentro do banner */
+.banner-content {
+  background: rgba(0, 0, 0, 0.4); /* leve fundo transparente para destacar texto */
+  padding: 20px 40px;
+  border-radius: 8px;
+}
+
+.banner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.banner button {
+  background-color: var(--cor-destaque); /* laranja para chamar atenção */
+  color: var(--cor-branco);
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.banner button:hover {
+  background-color: var(--cor-secundaria); /* verde no hover */
 }

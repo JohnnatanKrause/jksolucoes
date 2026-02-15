@@ -1,15 +1,27 @@
+<!-- ================================
+     HEADER-SITE.HTML - JK SOLUÇÕES
+     ================================ -->
+
 <header>
-  <nav>
-    <a href="index.html">
-      <img src="assets/img/logo.png" alt="JK Soluções" class="logo">
-    </a>
-    <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="sobre.html">Sobre</a></li>
-      <li><a href="servicos.html">Serviços</a></li>
-      <li><a href="diretrizes.html">Diretrizes</a></li>
-      <li><a href="contato.html">Contato</a></li>
-      <li><a href="../sistema/login.html">Área Restrita</a></li>
-    </ul>
-  </nav>
+  <div class="container">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="../assets/img/logo.png" alt="JK Soluções">
+    </div>
+
+    <!-- Menu de navegação -->
+    <nav class="nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#diretrizes">Diretrizes</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="../sistema/login.html" class="btn-area-restrita">Área Restrita</a></li>
+      </ul>
+    </nav>
+
+    <!-- Botão menu mobile -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  </div>
 </header>

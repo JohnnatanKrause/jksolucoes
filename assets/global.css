@@ -520,3 +520,98 @@ section {
   scroll-margin-top: 150px;
   /* ajuste conforme a altura do header */
 }
+footer a {
+  color:  #808080;              /* branco para contraste */
+  text-decoration: none;    /* remove sublinhado */
+  font-weight: bold;        /* opcional, para destacar */
+}
+
+footer a:hover {
+  color: #25D366;           /* verde WhatsApp no hover, ou outra cor */
+}
+#diretrizes {
+  background-color: #fff; /* fundo branco da seção */
+  color: #000;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#diretrizes h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #003366; /* azul institucional */
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background-color: #808080; /* cinza padrão */
+  color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 280px;
+  min-height: 180px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-align: left;
+}
+
+.card:hover {
+  background-color: #25D366; /* verde padrão do site */
+  transform: translateY(-6px);
+}
+
+.titulo-card {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #000; /* preto para destaque */
+  margin-bottom: 10px;
+}
+
+.destaque {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #000; /* preto para dar contraste */
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background-color: #f9f9f9; /* fundo claro */
+  border-radius: 12px;
+  padding: 15px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  color: #000;
+}
+
+.card:hover {
+  background-color: #25D366; /* verde padrão */
+  transform: translateY(-6px);
+  color: #fff;
+}
+
+.card img.thumb {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}

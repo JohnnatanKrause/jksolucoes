@@ -1,0 +1,75 @@
+<head>
+  <meta charset="UTF-8">
+  <title>JK Soluções - Engenharia que gera resultados</title>
+  <!-- Estilos globais -->
+  <link rel="stylesheet" href="../assets/global.css">
+  <!-- Estilos específicos do site -->
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+
+<body>
+  <!-- Header carregado dinamicamente -->
+  <div id="header"></div>
+
+  <main>
+    <!-- GMGs -->
+    <section id="gmg" class="servico invertido">
+      <div class="servico-container">
+        <div class="servico-texto">
+          <h2>GMGs</h2>
+          <p> Atuamos com <strong>Grupos Moto-Geradores (GMGs) multimarcas</strong>, oferecendo soluções completas em geração de energia
+            com <strong>geradores a diesel e biogás</strong>. Desde 2015, acumulamos <strong> ampla experiência </strong>em instalação, manutenção e
+            recuperação de sistemas elétricos, atendendo produtores rurais, cooperativas, indústrias e empreendimentos
+            de alta demanda energética. </p>
+          <p> Nosso principal setor de atuação é o <strong>agronegócio</strong>, apoiando produtores que utilizam
+            <strong>geração distribuída e emergencial com GMGs a biogás</strong>. Também atendemos estabelecimentos urbanos que
+            necessitam de <strong>geração própria de emergência com geradores a diesel</strong>, garantindo fornecimento contínuo e
+            confiável em qualquer cenário. </p>
+          <p> Realizamos <strong>manutenções preditivas, preventivas e corretivas, além de retrofits</strong> de
+            geradores, modernizando plantas e agregando tecnologia.<strong> Atuamoscom diagnósticos de falhas, treinamentos,
+            perícias, substituição de peças e suporte remoto</strong> — desde orientações até monitoramento e operação de plantas
+            de geração. </p> 
+            <a href="#" class="btn-whatsapp" data-servico="Serviços para GMGs">
+            💬 Precisa de ajuda com seu grupo moto-gerador? Chame a JK Soluções!
+          </a>         
+          <script>
+            document.querySelectorAll('.btn-whatsapp').forEach(btn => {
+              btn.addEventListener('click', () => {
+                const servico = btn.getAttribute('data-servico');
+                const mensagem = `Olá! Vim do site JK Soluções e tenho interesse em ${servico}.`;
+                const url = `https://wa.me/5545988213899?text=${encodeURIComponent(mensagem)}`;
+                window.open(url, '_blank');
+              });
+            });
+          </script>
+        </div>
+        <div class="servico-imagem">
+          <img src="../assets/img/gmg.png" alt="Gerador industrial em operação">
+        
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer carregado dinamicamente -->
+  <div id="footer"></div>
+
+  <!-- Scripts globais -->
+  <script src="../assets/global.js"></script>
+  <!-- Scripts específicos do site -->
+  <script src="assets/js/site.js"></script>
+
+  <!-- Inclusão dos partials -->
+  <script>
+    // Carregar header
+    fetch("partials/header-site.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header").innerHTML = data);
+
+    // Carregar footer
+    fetch("partials/footer-site.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
+</body>

@@ -264,7 +264,7 @@ header {
   /* ocupa a tela inteira */
   width: 100%;
   padding: 100px 20px;
-  background-image: url('/assets/img/banner.png');
+  background-image: url('../assets/img/banner.png');
   /* ajuste o caminho da imagem */
   background-size: cover;
   background-position: center left;
@@ -343,82 +343,7 @@ header {
   }
 }
 
-/* ================================
-   SEÇÃO SOBRE
-   ================================ */
-.sobre {
-  width: 100%;
-  padding: 80px 20px;
-  background-color: var(--cor-branco);
-}
 
-.sobre-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.sobre-texto {
-  flex: 1;
-}
-
-.sobre-texto h2 {
-  font-size: 2.2rem;
-  color: var(--cor-primaria);
-  margin-bottom: 20px;
-}
-
-.sobre-texto p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: var(--cor-texto);
-  margin-bottom: 30px;
-}
-
-.sobre-texto .btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: var(--cor-secundaria);
-  color: var(--cor-branco);
-  font-weight: bold;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-.sobre-texto .btn:hover {
-  background-color: var(--cor-primaria);
-}
-
-.sobre-imagem {
-  flex: 1;
-  text-align: center;
-}
-
-.sobre-imagem img {
-  max-width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .sobre-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .sobre-texto h2 {
-    font-size: 1.8rem;
-  }
-
-  .sobre-texto p {
-    font-size: 1rem;
-  }
-}
 
 /* ================================
    SEÇÃO SERVIÇOS
@@ -520,17 +445,24 @@ section {
   scroll-margin-top: 150px;
   /* ajuste conforme a altura do header */
 }
+
 footer a {
-  color:  #808080;              /* branco para contraste */
-  text-decoration: none;    /* remove sublinhado */
-  font-weight: bold;        /* opcional, para destacar */
+  color: #808080;
+  /* branco para contraste */
+  text-decoration: none;
+  /* remove sublinhado */
+  font-weight: bold;
+  /* opcional, para destacar */
 }
 
 footer a:hover {
-  color: #25D366;           /* verde WhatsApp no hover, ou outra cor */
+  color: #25D366;
+  /* verde WhatsApp no hover, ou outra cor */
 }
+
 #diretrizes {
-  background-color: #fff; /* fundo branco da seção */
+  background-color: #fff;
+  /* fundo branco da seção */
   color: #000;
   padding: 60px 20px;
   text-align: center;
@@ -539,7 +471,8 @@ footer a:hover {
 #diretrizes h2 {
   font-size: 2.2rem;
   margin-bottom: 40px;
-  color: #003366; /* azul institucional */
+  color: #003366;
+  /* azul institucional */
 }
 
 .cards {
@@ -550,34 +483,39 @@ footer a:hover {
 }
 
 .card {
-  background-color: #808080; /* cinza padrão */
+  background-color: #808080;
+  /* cinza padrão */
   color: #fff;
   border-radius: 12px;
   padding: 20px;
   width: 280px;
   min-height: 180px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s ease, transform 0.3s ease;
   text-align: left;
 }
 
 .card:hover {
-  background-color: #25D366; /* verde padrão do site */
+  background-color: #25D366;
+  /* verde padrão do site */
   transform: translateY(-6px);
 }
 
 .titulo-card {
   font-size: 1.4rem;
   font-weight: bold;
-  color: #000; /* preto para destaque */
+  color: #000;
+  /* preto para destaque */
   margin-bottom: 10px;
 }
 
 .destaque {
   font-weight: bold;
   font-size: 1.1rem;
-  color: #000; /* preto para dar contraste */
+  color: #000;
+  /* preto para dar contraste */
 }
+
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -586,19 +524,21 @@ footer a:hover {
 }
 
 .card {
-  background-color: #f9f9f9; /* fundo claro */
+  background-color: #f9f9f9;
+  /* fundo claro */
   border-radius: 12px;
   padding: 15px;
   width: 220px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease, transform 0.3s ease;
   text-decoration: none;
   color: #000;
 }
 
 .card:hover {
-  background-color: #25D366; /* verde padrão */
+  background-color: #25D366;
+  /* verde padrão */
   transform: translateY(-6px);
   color: #fff;
 }
@@ -614,4 +554,130 @@ footer a:hover {
 .card h3 {
   font-size: 1.2rem;
   margin: 0;
+}
+
+
+blockquote {
+  margin-top: 20px;
+  font-style: italic;
+  color: #25D366;
+  border-left: 4px solid #25D366;
+  padding-left: 10px;
+}
+
+
+/* ================================
+   SEÇÃO SOBRE
+   ================================ */
+#sobre {
+  width: 100%;
+  padding: 80px 20px;
+  background-color: var(--cor-branco);
+}
+
+/* Containers principais */
+.sobre-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+}
+
+.sobre-container.invertido {
+  flex-direction: row-reverse; /* inverte imagem e texto */
+}
+
+/* Colunas */
+.sobre-col {
+  flex: 1;
+  padding: 20px;
+}
+
+.sobre-col.texto h3 {
+  font-size: 2rem;
+  color: var(--cor-primaria);
+  margin-bottom: 20px;
+}
+
+.sobre-col.texto p,
+.sobre-full {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--cor-texto);
+}
+
+/* Imagens */
+.sobre-col.imagem img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Texto expandido ocupando toda largura */
+.sobre-full {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+/* Frase de impacto */
+.sobre-full.impacto blockquote {
+  font-style: italic;
+  color: #25D366;
+  border-left: 4px solid #25D366;
+  padding-left: 10px;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .sobre-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre-col.texto h3 {
+    font-size: 1.6rem;
+  }
+
+  .sobre-col.texto p,
+  .sobre-full {
+    font-size: 1rem;
+  }
+}
+.sobre-full.impacto blockquote {
+  font-family: 'Georgia', serif; /* fonte mais elegante */
+  font-size: 1.2rem;
+  line-height: 1.8;
+  font-style: italic;
+  color: #333;
+  position: relative;
+  padding: 20px 40px;
+  margin: 40px auto;
+  max-width: 900px;
+  background: #f9f9f9;
+  border-left: 6px solid #25D366; /* verde de impacto */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.sobre-full.impacto blockquote::before {
+  content: "“";
+  font-size: 3rem;
+  color: #25D366;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+}
+
+.sobre-full.impacto blockquote::after {
+  content: "”";
+  font-size: 3rem;
+  color: #25D366;
+  position: absolute;
+  right: 10px;
+  bottom: -10px;
 }

@@ -1,0 +1,63 @@
+<head>
+  <meta charset="UTF-8">
+  <title>JK Soluções - Engenharia que gera resultados</title>
+  <!-- Estilos globais -->
+  <link rel="stylesheet" href="../assets/global.css">
+  <!-- Estilos específicos do site -->
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+
+<body>
+  <!-- Header carregado dinamicamente -->
+  <div id="header"></div>
+
+  <main>
+
+    <!-- Venda de Peças -->
+    <section id="pecas" class="servico">
+      <div class="servico-container">
+        <div class="servico-texto">
+          <h2>Venda de Peças e Componentes</h2>
+          <p>
+            Disponibilizamos peças e componentes originais e multimarcas para grupos geradores e sistemas elétricos.
+            Nosso portfólio inclui filtros, óleos, cabos, disjuntores, sensores e diversos itens essenciais para
+            manutenção e operação confiável.
+          </p>
+          <p>
+            Trabalhamos com fornecedores parceiros de confiança, garantindo qualidade e disponibilidade rápida.
+            Oferecemos suporte técnico para identificar a peça correta e orientar na substituição, evitando falhas
+            e prolongando a vida útil dos equipamentos.
+          </p>
+          <a href="#" class="btn-whatsapp" data-servico="Venda de Peças">
+            💬 Precisa de peças e componentes elétricos? Solicite um orçamento!
+          </a>
+        </div>
+        <div class="servico-imagem">
+          <img src="../assets/img/vendas.png" alt="Peças e componentes elétricos">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer carregado dinamicamente -->
+  <div id="footer"></div>
+
+  <!-- Scripts globais -->
+  <script src="../assets/global.js"></script>
+  <!-- Scripts específicos do site -->
+  <script src="assets/js/site.js"></script>
+
+  <!-- Inclusão dos partials -->
+  <script>
+    // Carregar header
+    fetch("partials/header-site.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header").innerHTML = data);
+
+    // Carregar footer
+    fetch("partials/footer-site.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
+</body>

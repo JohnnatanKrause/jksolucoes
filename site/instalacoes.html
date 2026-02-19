@@ -1,0 +1,63 @@
+<head>
+  <meta charset="UTF-8">
+  <title>JK Soluções - Engenharia que gera resultados</title>
+  <!-- Estilos globais -->
+  <link rel="stylesheet" href="../assets/global.css">
+  <!-- Estilos específicos do site -->
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+
+<body>
+  <!-- Header carregado dinamicamente -->
+  <div id="header"></div>
+
+  <main>
+
+    <!-- Instalações Elétricas -->
+    <section id="instalacoes" class="servico">
+      <div class="servico-container">
+        <div class="servico-texto">
+          <h2>Instalações Elétricas</h2>
+          <p>
+            Realizamos projetos e instalações elétricas completas, desde sistemas industriais de alta potência até
+            soluções comerciais e residenciais. Nossa atuação garante segurança, eficiência e conformidade com as
+            normas vigentes.
+          </p>
+          <p>
+            Trabalhamos com dimensionamento de cargas, painéis de distribuição, sistemas de proteção e automação,
+            sempre priorizando a confiabilidade e a continuidade operacional. Cada instalação é planejada para
+            atender às demandas específicas do cliente, com foco em durabilidade e performance.
+          </p>
+          <a href="#" class="btn-whatsapp" data-servico="Instalações Elétricas">
+            💬 Quer instalar ou modernizar seu sistema elétrico? Fale conosco
+          </a>
+        </div>
+        <div class="servico-imagem">
+          <img src="../assets/img/instalacoes.png" alt="Instalações elétricas industriais">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer carregado dinamicamente -->
+  <div id="footer"></div>
+
+  <!-- Scripts globais -->
+  <script src="../assets/global.js"></script>
+  <!-- Scripts específicos do site -->
+  <script src="assets/js/site.js"></script>
+
+  <!-- Inclusão dos partials -->
+  <script>
+    // Carregar header
+    fetch("partials/header-site.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header").innerHTML = data);
+
+    // Carregar footer
+    fetch("partials/footer-site.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
+</body>

@@ -1,0 +1,64 @@
+<head>
+  <meta charset="UTF-8">
+  <title>JK Soluções - Engenharia que gera resultados</title>
+  <!-- Estilos globais -->
+  <link rel="stylesheet" href="../assets/global.css">
+  <!-- Estilos específicos do site -->
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+
+<body>
+  <!-- Header carregado dinamicamente -->
+  <div id="header"></div>
+
+  <main>
+
+    <!-- Serviços Tech -->
+    <section id="tech" class="servico invertido">
+      <div class="servico-container">
+        <div class="servico-texto">
+          <h2>Serviços Tech</h2>
+          <p>
+            Atuamos com tecnologias aplicadas à engenharia elétrica, como automação industrial, sistemas de
+            monitoramento remoto, integração de sensores e controle inteligente de cargas. Desenvolvemos soluções
+            personalizadas que aumentam a eficiência operacional e reduzem custos.
+          </p>
+          <p>
+            Além disso, contamos com expertise em <strong>ADS (Análise e Desenvolvimento de Sistemas)</strong>,
+            integrando engenharia e tecnologia para criar soluções digitais que potencializam processos industriais
+            e comerciais. Essa integração permite oferecer sistemas inteligentes, conectados e sob medida, unindo
+            robustez e inovação.
+          </p>
+          <a href="#" class="btn-whatsapp" data-servico="Serviços Tech">
+            💬 Quer integrar tecnologia e engenharia na sua empresa? Clique aqui!
+          </a>
+        </div>
+        <div class="servico-imagem">
+          <img src="../assets/img/tech.png" alt="Automação e tecnologia aplicada à engenharia elétrica">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer carregado dinamicamente -->
+  <div id="footer"></div>
+
+  <!-- Scripts globais -->
+  <script src="../assets/global.js"></script>
+  <!-- Scripts específicos do site -->
+  <script src="assets/js/site.js"></script>
+
+  <!-- Inclusão dos partials -->
+  <script>
+    // Carregar header
+    fetch("partials/header-site.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header").innerHTML = data);
+
+    // Carregar footer
+    fetch("partials/footer-site.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
+</body>
